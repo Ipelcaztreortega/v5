@@ -1,0 +1,78 @@
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: lightblue;
+    z-index: 1000;
+    height: 60px;
+}
+
+.navLogo h1 {
+    font-size: 1.5rem;
+}
+
+.navLinkContainer {
+    display: flex;
+    align-items: center;
+}
+
+.navLinks {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLink {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.navLink:hover {
+    color: brown;
+}
+
+/* The menuIcon will by default not be shown until the screen gets small enough */
+.menuIcon {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    /* Once the screen is small enough then it will be shown */
+    .menuIcon {
+        display: block;
+    }
+
+    /* The navLinkContainer will then switch,  */
+    .navLinkContainer {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: lightblue;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .showMenu {
+        display: flex;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navLink {
+        margin: 10px 0;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: left;
+    }
+}

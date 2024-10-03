@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
+import { Space_Grotesk } from 'next/font/google'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,8 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={spaceGrotesk.className}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
