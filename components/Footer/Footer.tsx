@@ -1,10 +1,12 @@
 import React from 'react';
 import { footerInfo } from '@/data/portfolio';
 import styles from './Footer.module.css';
+import GitHubStats from '../github/github';
 
 function Footer() {
     return (
         <footer className={styles.footerContainer}>
+            
             <div>
                 {footerInfo.email && (
                     <div>
@@ -14,7 +16,9 @@ function Footer() {
                     </div>
                 )}
             </div>
-                
+            
+            <GitHubStats />
+
             <div>
                 {footerInfo.socialLinks.map((link) => {
                     return (

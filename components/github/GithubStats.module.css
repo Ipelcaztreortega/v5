@@ -1,0 +1,10 @@
+.GithubStatsContainer{
+    display: flex;
+    justify-content: center;
+
+}
+
+.GithubInfo{
+    display:flex;
+    justify-content: space-evenly;
+}
